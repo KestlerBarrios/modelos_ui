@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       initialRoute: '/',
       routes: {
-        '/basicDesign': (BuildContext context) => BasicDesign(),
+        '/basicDesign': (_) => BasicDesign(),
         '/intermediateDesign': (BuildContext context) => IntermediateDesign(),
         '/advancedDesgin': (BuildContext context) => AdvancedDesign(),
       },
