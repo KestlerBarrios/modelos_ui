@@ -4,17 +4,56 @@ class IntermediateDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [Background(), ContentMain()],
-    ));
+      body: PageView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Page1(),
+          Page2(),
+        ],
+      ),
+    );
+  }
+}
+
+class Page2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Color(0xff51c2dc),
+      child: Center(
+        child: Container(
+          height: 50,
+          width: 200,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.blue,
+          ),
+          child: TextButton(
+            onPressed: () {},
+            child: Text(
+              'Bienvenido',
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Page1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Background(),
+        ContentMain(),
+      ],
+    );
   }
 }
 
 class ContentMain extends StatelessWidget {
-  const ContentMain({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     var textStyle = TextStyle(
