@@ -46,7 +46,7 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Background(),
+        _Background(),
         ContentMain(),
       ],
     );
@@ -80,7 +80,7 @@ class ContentMain extends StatelessWidget {
   }
 }
 
-class Background extends StatelessWidget {
+class _Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
